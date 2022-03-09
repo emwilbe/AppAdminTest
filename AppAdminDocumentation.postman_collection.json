@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "c0bc13ab-61e6-478a-b74c-cef5e03da655",
+		"name": "AppAdminDocumentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve number of users who have logged in today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/admin/logins?login_date=today",
+					"path": [
+						"admin",
+						"logins"
+					],
+					"query": [
+						{
+							"key": "login_date",
+							"value": "today"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Error Log from today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/admin/errors?error_date=today",
+					"path": [
+						"admin",
+						"errors"
+					],
+					"query": [
+						{
+							"key": "error_date",
+							"value": "today"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get notification rules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/admin/notifications",
+					"path": [
+						"admin",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve system performance reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/admin/performance_reports\n\n",
+					"path": [
+						"admin",
+						"performance_reports\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve availability reports for a service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/admin/services/:serviceID/availability_reports\n\n",
+					"path": [
+						"admin",
+						"services",
+						":serviceID",
+						"availability_reports\n\n"
+					],
+					"variable": [
+						{
+							"key": "serviceID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set up notification rules for outages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "/admin/notifications\n\n",
+					"path": [
+						"admin",
+						"notifications\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set up a notification rule regarding system performance spikes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "/admin/notifications\n\n",
+					"path": [
+						"admin",
+						"notifications\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new service to the system",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "/admin/services\n\n",
+					"path": [
+						"admin",
+						"services\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk update of notification rules",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "/admin/notifications\n\n",
+					"path": [
+						"admin",
+						"notifications\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a notification rule",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "/admin/notifications/:notif_ID\n\n",
+					"path": [
+						"admin",
+						"notifications",
+						":notif_ID\n\n"
+					],
+					"variable": [
+						{
+							"key": "notif_ID\n\n",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a system service",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "/admin/services/:serviceID\n\n",
+					"path": [
+						"admin",
+						"services",
+						":serviceID\n\n"
+					],
+					"variable": [
+						{
+							"key": "serviceID\n\n",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove all notifications",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "/admin/notifications\n\n",
+					"path": [
+						"admin",
+						"notifications\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove a notification rule",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "/admin/notifications/:notif_ID\n\n",
+					"path": [
+						"admin",
+						"notifications",
+						":notif_ID\n\n"
+					],
+					"variable": [
+						{
+							"key": "notif_ID\n\n",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove a system service",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "/admin/services/:service_ID\n\n",
+					"path": [
+						"admin",
+						"services",
+						":service_ID\n\n"
+					],
+					"variable": [
+						{
+							"key": "service_ID\n\n",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "tigerchow.com",
+			"type": "string"
+		}
+	]
+}
